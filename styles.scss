@@ -1100,6 +1100,11 @@ body {
     align-items: center;
     justify-content: space-between;
 
+    @include bp(tablet) {
+        flex-direction: column;
+        align-items: start;
+    }
+
     .footer-items {
         display: flex;
         font-family: "DM Sans";
@@ -1107,9 +1112,6 @@ body {
         .footer-block {
             margin-right: 75px;
 
-            @include bp(tablet) {
-                margin-right: 30px;
-            }
 
             .footer-inner {
                 margin-bottom: 30px;
@@ -1138,7 +1140,12 @@ body {
     .apply-block {
         font-family: "Lexend Deca";
         font-size: 25px;
+
+        @include bp(tablet) {
+            padding-top: 30px;
+        }
     }
+
 
     .apply-inner {
         
@@ -1146,7 +1153,9 @@ body {
             justify-content: end;
             margin-top: 20px;
 
-             
+            @include bp(tablet) {
+                justify-content: start;
+            }
 
             .applylink {
                 
