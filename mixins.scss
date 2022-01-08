@@ -28,10 +28,10 @@
 
 @mixin bp($point) {
 
-    $mobile: "(max-width: 424px)";
-    $mobile-landscape: "(min-width: 425px) and (max-width: 599px)";
-    $tablet: "(min-width: 600px) and (max-width: 899px)";
-    $desktop: "(min-width: 900px) and (max-width: 1200px)";
+    $mobile: "(max-width: 478px)";
+    $mobile-landscape: "(min-width: 479px) and (max-width: 767px)";
+    $tablet: "(min-width: 768px) and (max-width: 900px)";
+    $desktop: "(min-width: 901px) and (max-width: 1200px)";
       
     @if $point == mobile {
           @media #{$mobile} { @content; }
