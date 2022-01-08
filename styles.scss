@@ -197,8 +197,8 @@ body {
 
                 @include bp(mobile-landscape) {
                     @include flex;
-                    width: 8vw;
-                    height: 8vw;
+                    width: 5vw;
+                    height: 5vw;
                 }
 
                 
@@ -268,6 +268,8 @@ body {
 
         @include bp(mobile-landscape) {
             flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
         }
 
         .header-text {
@@ -290,10 +292,22 @@ body {
                 max-width: 34.3vw;
             }
 
+            @include bp(mobile-landscape) {
+                max-width: 70%;
+                text-align: center;
+                margin-top: 0;
+                margin-right: 0;
+                font-size: 32px;
+            }
+
         }
 
         .header-image {
           position: relative;
+
+          @include bp(mobile-landscape) {
+              margin-top: 15%;
+          }
 
           .background-image {
             position: absolute;
@@ -311,6 +325,12 @@ body {
                     height: 16.8vw;
                 }
 
+                @include bp(mobile-landscape) {
+                    width: 18.6vw;
+                    height: 18.8vw;
+                    top: 85%;
+                }
+
             }
    
             .right {
@@ -324,6 +344,13 @@ body {
                    height: 14.7vw;
                    top: -6vw;
                }
+
+               @include bp(mobile-landscape) {
+                   width: 20.4vw;
+                   height: 17.7vw;
+                   top: -6vw;
+                   right: -6vw;
+               }
             }
 
             .bottom {
@@ -335,6 +362,13 @@ body {
                 @include bp(tablet) {
                     width: 18.45vw;
                     height: 15.7vw;
+                }
+
+                @include bp(mobile-landscape) {
+                    width: 21.45vw;
+                    height: 17.7vw;
+                    right: -9vw;
+                    top: 90%;
                 }
             }
    
@@ -352,6 +386,11 @@ body {
                 height: 40vw;
             }
 
+            @include bp(mobile-landscape) {
+                width: 60vw;
+                height: 70vw;
+            }
+
             img {
                 object-fit: cover;
 
@@ -363,6 +402,12 @@ body {
 
         .header-right {
             z-index: 2;
+            
+            @include bp(mobile-landscape) {
+                display: flex;
+                justify-content: center;
+                margin: 10% auto;
+            }
             
 
             .header-eye {
@@ -376,6 +421,10 @@ body {
                     object-fit: cover;
                     transform: scale(1.8);
                     object-position: top;
+                }
+
+                @include bp(mobile-landscape) {
+                    display: none;
                 }
             }
 
@@ -395,6 +444,11 @@ body {
                     max-width: 20vw;
                 }
 
+                @include bp(mobile-landscape) {
+                    max-width: 60%;
+                    text-align: center;
+                }
+
             }
         }
      
@@ -406,6 +460,12 @@ body {
         padding-top: 12%;
         padding-right: 7vw;
 
+        @include bp(mobile-landscape) {
+            flex-direction: column;
+            // align-items: center;
+            text-align: center;
+        }
+
         .left {
         position: relative;
 
@@ -416,6 +476,11 @@ body {
                 position: relative;
                 width: 21.6vw;
                 height: 26.7vw;
+
+                @include bp(mobile-landscape) {
+                    width: 31.6vw;
+                    height: 36.7vw;
+                }
                
             }
 
@@ -425,6 +490,11 @@ body {
                 top: 30%;
                 width: 24vw;
                 height: 23.7vw;
+
+                @include bp(mobile-landscape) {
+                    width: 34vw;
+                    height: 33.7vw;
+                }
             }
         }
 
@@ -447,6 +517,11 @@ body {
                 margin-top: 2vw;
             }
 
+            @include bp(mobile-landscape) {
+                margin-top: 11vw;
+            }
+
+            
 
             .header-text {
                 font-size: 28px;
@@ -456,6 +531,10 @@ body {
 
                 @include bp(tablet) {
                     font-size: 25px;
+                }
+
+                @include bp(mobile-landscape) {
+                    font-size: 36px;
                 }
             }
 
@@ -484,6 +563,10 @@ body {
              @include bp(tablet) {
                  margin-top: 4vw;
             }
+
+            @include bp(mobile-landscape) {
+                align-self: end;
+            }
     
                 .flower {
                     z-index: 2;
@@ -493,6 +576,11 @@ body {
 
                     @include bp(tablet) {
                         height: 38vw;
+                    }
+
+                    @include bp(mobile-landscape) {
+                        width: 35vw;
+                        height: 46.8vw;
                     }
                 }
     
@@ -511,6 +599,11 @@ body {
                 @include bp(tablet) {
                     top: 30%;
                 }
+
+                @include bp(mobile-landscape) {
+                    width: 44vw;
+                    height: 35.6vw;
+                }
                 }
             }
     }
@@ -522,6 +615,9 @@ body {
     background: #C5CEBD;
     display: flex;
 
+    @include bp(mobile-landscape) {
+        flex-direction: column;
+    }
 
     .main-left {
 
@@ -533,11 +629,20 @@ body {
             width: 70%;
         }
 
+        @include bp(mobile-landscape) {
+            width: 100%;
+        }
+
 
         .girl-main {
             width: 38.7vw;
             height: 49vw;
             position: relative;
+
+            @include bp(mobile-landscape) {
+                width: 48.7vw;
+                height: 60vw;
+            }
 
 
             img {
@@ -552,6 +657,13 @@ body {
                 right: -20%;
                 bottom: -15%;
                 z-index: 1;
+
+                @include bp(mobile-landscape) {
+                    width: 16.5vw;
+                    height: 26.2vw;
+                    bottom: -20%;
+                    right: -15%;
+                }
             }
         }
 
@@ -572,6 +684,11 @@ body {
             max-width: 40%;
         }
 
+        @include bp(mobile-landscape) {
+            min-width: 40%;
+            margin: 0 20px;
+        }
+
         .header-text {
             font-size: 56px;
             line-height: 66px;
@@ -589,6 +706,11 @@ body {
             @include bp(tablet) {
                 font-size: 35px;
                 line-height: 40px;
+            }
+
+            @include bp(mobile-landscape) {
+                font-size: 48px;
+                line-height: 50px;
             }
 
         }
@@ -618,6 +740,12 @@ body {
              width: 30%;
         }
 
+        @include bp(mobile-landscape) {
+            width: 100%;
+            margin-top: 15vw;
+            margin-bottom: 7vw;
+        }
+
         .hair-dryer {
             width: 23.5vw;
             height: 27.7vw;
@@ -625,6 +753,12 @@ body {
             top: 20vw;
             right: 5.6vw;
             z-index: 3;
+
+            @include bp(mobile-landscape) {
+                width: 33.5vw;
+                height: 37.7vw;
+                top: 0;
+            }
 
             img {
                 object-fit: cover;
@@ -638,6 +772,10 @@ body {
             height: 100%;
             overflow: hidden;
 
+            @include bp(mobile-landscape) {
+                overflow: visible;
+            }
+
         .main-swirl {
             position: absolute;
             height: 38vw;
@@ -645,6 +783,9 @@ body {
             z-index: 1;
             top: 0;
 
+            @include bp(mobile-landscape) {
+                right: 35vw;
+            }
             
         }
 
@@ -657,6 +798,11 @@ body {
             position: absolute;
             right: 0;
             z-index: 2;
+
+            @include bp(mobile-landscape) {
+                display: none;
+            }
+
 
             img {
                 object-fit: cover;
@@ -678,16 +824,28 @@ body {
     font-family: "Lexend Deca";
     padding: 10.4vw 14.4vw;
     background: #dfccc2;
+
     
     .services-title {
         text-align: center;
         font-size: 40px;
+
+        @include bp(mobile-landscape) {
+            margin-top: 10%;
+            font-size: 48px;
+        }
     }
 
     .hairstyle-block {
         display: flex;
         justify-content: space-between;
         padding-top: 7%;
+
+
+        @include bp(mobile-landscape) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .cut {
 
@@ -698,6 +856,11 @@ body {
                 @include bp(tablet) {
                     width: 15vw;
                     height: 26.5vw;
+                }
+
+                @include bp(mobile-landscape) {
+                    width: 33vw;
+                    height: 46.5vw;
                 }
 
                 img {
@@ -727,6 +890,8 @@ body {
                 @include bp(tablet) {
                     font-size: 25px;
                 }
+
+                
             }
 
             .color-block {
@@ -740,6 +905,11 @@ body {
                     @include bp(tablet) {
                         width: 15vw;
                         height: 43.9vw;
+                    }
+
+                    @include bp(mobile-landscape) {
+                        width: 33vw;
+                        height: 60vw;
                     }
 
                     
@@ -757,6 +927,12 @@ body {
 
                     @include bp(tablet) {
                         min-width: 25vw;
+                    }
+
+                    @include bp(mobile-landscape) {
+                        min-width: 50vw;
+                        right: 20vw;
+                        bottom: -12vw;
                     }
 
 
@@ -812,12 +988,23 @@ body {
                         z-index: 1;
                         bottom: -4.3vw;
                         right: -5.8vw;
+
+                        @include bp(mobile-landscape) {
+                            width: 26.5vw;
+                            height: 25vw;
+                            bottom: -8vw;
+                        }
                     }
                 }
             }
         }
 
         .braid {
+
+            @include bp(mobile-landscape) {
+                margin-top: 22vw;
+            }
+
              .braid-img {
                  width: 13.3vw;
                  height: 26.3vw;
@@ -826,6 +1013,11 @@ body {
                  @include bp(tablet) {
                     width: 15vw;
                     height: 30.5vw;
+                }
+
+                @include bp(mobile-landscape) {
+                    width: 33vw;
+                    height: 46.3vw;
                 }
 
                  img {
@@ -841,6 +1033,12 @@ body {
                      z-index: 1;
                      bottom: 0;
                      right: -9.5vw;
+
+                     @include bp(mobile-landscape) {
+                        width: 25.2vw;
+                        height: 21.8vw;
+                        right: -15vw;
+                    }
 
                      img {
                          object-fit: contain;
@@ -874,6 +1072,10 @@ body {
     @include bp(tablet) {
         font-size: 14px;
     }
+
+    @include bp(mobile-landscape) {
+        right: -40px;
+    }
 }
 }
 
@@ -890,6 +1092,10 @@ body {
     justify-content: center;
     padding-bottom: 7.3vw;
     align-items: flex-end;
+
+    @include bp(mobile-landscape) {
+        min-height: 70vw;
+    }
 
     .overlay {
         background-color: rgba(209, 209, 209, 0.2);
@@ -913,7 +1119,12 @@ body {
             @include bp(tablet) {
                 font-size: 48px;
             }
+
+            @include bp(mobile-landscape) {
+                font-size: 46px;
+            }
          }
+
 
          .passion-text {
              max-width: 70%;
@@ -965,6 +1176,17 @@ body {
         position: relative;
         z-index: 3;
 
+
+        @include bp(mobile-landscape) {
+            margin-top: 50vw;
+        }
+
+        @include bp(mobile-landscape) {
+            width: 25vw;
+            height: 25vw;
+            margin-right: -10vw;
+        }
+
         img {
             object-fit: cover;
         }
@@ -980,6 +1202,13 @@ body {
             position: absolute;
             left: -14vw;
             top: 9vw;
+
+            @include bp(mobile-landscape) {
+                width: 20vw;
+                height: 22vw;
+                top: 27vw;
+                left: -16vw;
+            }
         }
 
         .bw-woman {
@@ -987,6 +1216,11 @@ body {
             height: 35.4vw;
             position: relative;
             z-index: 2;
+
+            @include bp(mobile-landscape) {
+                width: 61.8vw;
+                height: 65.4vw;
+            }
 
             img {
                 object-fit: cover;
@@ -999,6 +1233,11 @@ body {
            position: absolute;
            right: -6vw;
            top: 4vw;
+
+           @include bp(mobile-landscape) {
+            width: 25vw;
+            height: 32vw;
+        }
         }
     }
 
@@ -1011,6 +1250,11 @@ body {
         position: relative;
         z-index: 3;
 
+        @include bp(mobile-landscape) {
+            margin-left: -12vw;
+            margin-bottom: 35vw;
+        }
+
         .image-cont {
             width: 17.8vw;
             height: 18vw;
@@ -1018,6 +1262,11 @@ body {
             @include bp(desktop) {
                 width: 22vw;
                 height: 19vw;
+            }
+
+            @include bp(mobile-landscape) {
+                width: 30.8vw;
+                height: 30vw;
             }
 
             @include bp(tablet) {
@@ -1040,6 +1289,10 @@ body {
             @include bp(tablet) {
                 max-width: 22vw;
             }
+
+            @include bp(mobile-landscape) {
+                max-width: 28vw;
+            }
             
 
             .best-self {
@@ -1057,6 +1310,10 @@ body {
                     line-height: 30px;
                 }
 
+                @include bp(mobile-landscape) {
+                    line-height: 30px;
+                    font-size: 23px;
+                }
             }
 
             .appointment {
@@ -1105,6 +1362,11 @@ body {
         align-items: start;
     }
 
+    @include bp(mobile-landscape) {
+        flex-direction: column;
+        align-items: start;
+    }
+
     .footer-items {
         display: flex;
         font-family: "DM Sans";
@@ -1144,6 +1406,10 @@ body {
         @include bp(tablet) {
             padding-top: 30px;
         }
+
+        @include bp(mobile-landscape) {
+            padding-top: 30px;
+        }
     }
 
 
@@ -1157,6 +1423,10 @@ body {
                 justify-content: start;
             }
 
+            @include bp(mobile-landscape) {
+                justify-content: start;
+            }
+
             .applylink {
                 
                 font-family: "Lexend Deca";
@@ -1167,6 +1437,10 @@ body {
                 color:  #F95454;
 
                 @include bp(tablet) {
+                    font-size: 22px;
+                }
+
+                @include bp(mobile-landscape) {
                     font-size: 22px;
                 }
 
