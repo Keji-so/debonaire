@@ -22,6 +22,7 @@ startLoad.to('.pink',{
                   y: '-100%',
                   ease: 'easeOut',
                   duration: 0.6,
+                  delay: 0.08,
                   })
                 .from('.letter',{
                     y: '100%',
@@ -40,7 +41,11 @@ startLoad.to('.pink',{
                     ease: 'easeIn',
                     duration: 0.6,
                     delay: 0.9,
-                   })                                  
+                   })  
+             .to('.loading',{
+                    height: 0,
+                    duration: 0.01,
+                   })                                        
                   ; 
                   
 startLoad.play();
