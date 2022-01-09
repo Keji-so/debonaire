@@ -39,6 +39,12 @@ body {
             padding: 30px;
         }
 
+        @include bp(mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 30px;
+        }
+
         .nav-block {
             width: 33.3%;
 
@@ -47,6 +53,10 @@ body {
             }
 
             @include bp(mobile-landscape) {
+                width: 100%;
+            }
+
+            @include bp(mobile) {
                 width: 100%;
             }
 
@@ -68,6 +78,12 @@ body {
                 order: 2;
             }
 
+            @include bp(mobile) {
+                flex-direction: column;
+                align-items: flex-end;
+                order: 2;
+            }
+
 
             .about {
                     margin: 0 70px;
@@ -81,6 +97,10 @@ body {
                     }
 
                     @include bp(mobile-landscape) {
+                        margin: 0;
+                    }
+
+                    @include bp(mobile) {
                         margin: 0;
                     }
                     
@@ -119,6 +139,12 @@ body {
                     height: 0;
                     transition: all 0.5s ease-in;
                 }
+
+                @include bp(mobile) {
+                    overflow: hidden;
+                    height: 0;
+                    transition: all 0.3s ease-in;
+                }
                 
             }
 
@@ -129,6 +155,10 @@ body {
                 }
 
                 @include bp(mobile-landscape) {
+                    height: auto;
+                }
+
+                @include bp(mobile) {
                     height: auto;
                 }
             }
@@ -143,6 +173,10 @@ body {
             }
 
             @include bp(mobile-landscape) {
+                display: block;
+            }
+
+            @include bp(mobile) {
                 display: block;
             }
 
@@ -173,6 +207,13 @@ body {
                 padding: 10px 0;
             }
 
+            @include bp(mobile) {
+                order: 1;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+                font-size: 40px;
+            }
 
             .turn {
                 transform: rotate(45deg);
@@ -200,6 +241,12 @@ body {
                     width: 5vw;
                     height: 5vw;
                 }
+
+                @include bp(mobile) {
+                    @include flex;
+                    width: 6vw;       
+                    height: 6vw;       
+                  }
 
                 
 
@@ -231,6 +278,10 @@ body {
         @include bp(mobile-landscape) {
             display: none;
         }
+
+        @include bp(mobile) {
+            display: none;
+        }
         
         .navlink {
             font-family: "DM Sans";
@@ -243,6 +294,10 @@ body {
             }
 
             @include bp(mobile-landscape) {
+                margin-left: 0;
+            }
+
+            @include bp(mobile) {
                 margin-left: 0;
             }
 
@@ -267,6 +322,12 @@ body {
         padding-top: 80px;
 
         @include bp(mobile-landscape) {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        @include bp(mobile) {
             flex-direction: column;
             align-items: center;
             padding-top: 50px;
@@ -300,12 +361,24 @@ body {
                 font-size: 32px;
             }
 
+            @include bp(mobile) {
+                max-width: 80%;
+                text-align: center;
+                margin-top: 0;
+                margin-right: 0;
+                font-size: 30px;
+            }
+
         }
 
         .header-image {
           position: relative;
 
           @include bp(mobile-landscape) {
+              margin-top: 15%;
+          }
+
+          @include bp(mobile) {
               margin-top: 15%;
           }
 
@@ -331,6 +404,12 @@ body {
                     top: 85%;
                 }
 
+                @include bp(mobile) {
+                    width: 18.6vw;
+                    height: 18.8vw;
+                    top: 85%;
+                }
+
             }
    
             .right {
@@ -351,6 +430,14 @@ body {
                    top: -6vw;
                    right: -6vw;
                }
+
+               @include bp(mobile) {
+                width: 20.4vw;
+                height: 17.7vw;
+                top: -6vw;
+                right: -6vw;
+            }
+
             }
 
             .bottom {
@@ -365,6 +452,13 @@ body {
                 }
 
                 @include bp(mobile-landscape) {
+                    width: 21.45vw;
+                    height: 17.7vw;
+                    right: -9vw;
+                    top: 90%;
+                }
+
+                @include bp(mobile) {
                     width: 21.45vw;
                     height: 17.7vw;
                     right: -9vw;
@@ -391,6 +485,11 @@ body {
                 height: 70vw;
             }
 
+            @include bp(mobile) {
+                width: 60vw;
+                height: 70vw;
+            }
+
             img {
                 object-fit: cover;
 
@@ -404,6 +503,12 @@ body {
             z-index: 2;
             
             @include bp(mobile-landscape) {
+                display: flex;
+                justify-content: center;
+                margin: 10% auto;
+            }
+
+            @include bp(mobile) {
                 display: flex;
                 justify-content: center;
                 margin: 10% auto;
@@ -424,6 +529,10 @@ body {
                 }
 
                 @include bp(mobile-landscape) {
+                    display: none;
+                }
+
+                @include bp(mobile) {
                     display: none;
                 }
             }
@@ -449,6 +558,11 @@ body {
                     text-align: center;
                 }
 
+                @include bp(mobile) {
+                    max-width: 60%;
+                    text-align: center;
+                }
+
             }
         }
      
@@ -462,8 +576,13 @@ body {
 
         @include bp(mobile-landscape) {
             flex-direction: column;
-            // align-items: center;
             text-align: center;
+        }
+
+        @include bp(mobile) {
+            flex-direction: column;
+            text-align: center;
+            padding: 0;
         }
 
         .left {
@@ -481,6 +600,11 @@ body {
                     width: 31.6vw;
                     height: 36.7vw;
                 }
+
+                @include bp(mobile) {
+                    width: 40.6vw;
+                    height: 41.7vw;
+                }
                
             }
 
@@ -494,6 +618,11 @@ body {
                 @include bp(mobile-landscape) {
                     width: 34vw;
                     height: 33.7vw;
+                }
+
+                @include bp(mobile) {
+                    width: 38vw;
+                    height: 37.7vw;
                 }
             }
         }
@@ -521,6 +650,11 @@ body {
                 margin-top: 11vw;
             }
 
+            @include bp(mobile) {
+                margin: 0 50px;
+                margin-top: 13vw;
+            }
+
             
 
             .header-text {
@@ -534,6 +668,10 @@ body {
                 }
 
                 @include bp(mobile-landscape) {
+                    font-size: 36px;
+                }
+
+                @include bp(mobile) {
                     font-size: 36px;
                 }
             }
@@ -567,6 +705,11 @@ body {
             @include bp(mobile-landscape) {
                 align-self: end;
             }
+
+            @include bp(mobile) {
+                align-self: end;
+                margin-right: 7vw;
+            }
     
                 .flower {
                     z-index: 2;
@@ -581,6 +724,11 @@ body {
                     @include bp(mobile-landscape) {
                         width: 35vw;
                         height: 46.8vw;
+                    }
+
+                    @include bp(mobile) {
+                        width: 37vw;
+                        height: 48.8vw;
                     }
                 }
     
@@ -604,6 +752,11 @@ body {
                     width: 44vw;
                     height: 35.6vw;
                 }
+
+                @include bp(mobile) {
+                    width: 47vw;
+                    height: 37.6vw;
+                }
                 }
             }
     }
@@ -616,6 +769,10 @@ body {
     display: flex;
 
     @include bp(mobile-landscape) {
+        flex-direction: column;
+    }
+
+    @include bp(mobile) {
         flex-direction: column;
     }
 
@@ -633,6 +790,11 @@ body {
             width: 100%;
         }
 
+        @include bp(mobile) {
+            width: 100%;
+            flex-direction: column;
+        }
+
 
         .girl-main {
             width: 38.7vw;
@@ -640,6 +802,11 @@ body {
             position: relative;
 
             @include bp(mobile-landscape) {
+                width: 48.7vw;
+                height: 60vw;
+            }
+
+            @include bp(mobile) {
                 width: 48.7vw;
                 height: 60vw;
             }
@@ -663,6 +830,13 @@ body {
                     height: 26.2vw;
                     bottom: -20%;
                     right: -15%;
+                }
+
+                @include bp(mobile) {
+                    width: 20.5vw;
+                    height: 30.2vw;
+                    bottom: -20%;
+                    right: -25%;
                 }
             }
         }
@@ -689,6 +863,12 @@ body {
             margin: 0 20px;
         }
 
+        @include bp(mobile) {
+            min-width: 70%;
+            margin: 0 20px;
+            margin-top: 60px;
+        }
+
         .header-text {
             font-size: 56px;
             line-height: 66px;
@@ -713,6 +893,13 @@ body {
                 line-height: 50px;
             }
 
+            @include bp(mobile) {
+                font-size: 38px;
+                margin-left: 0;
+                line-height: 44px;
+                text-align: center;
+            }
+
         }
 
         .right-text {
@@ -723,6 +910,10 @@ body {
 
             @include bp(tablet) {
                 margin-top: 25px;
+            }
+
+            @include bp(mobile) {
+                text-align: center;
             }
         }
     }
@@ -746,6 +937,12 @@ body {
             margin-bottom: 7vw;
         }
 
+        @include bp(mobile) {
+            width: 100%;
+            margin-top: 15vw;
+            margin-bottom: 7vw;
+        }
+
         .hair-dryer {
             width: 23.5vw;
             height: 27.7vw;
@@ -757,6 +954,12 @@ body {
             @include bp(mobile-landscape) {
                 width: 33.5vw;
                 height: 37.7vw;
+                top: 0;
+            }
+
+            @include bp(mobile) {
+                width: 36.5vw;
+                height: 50vw;
                 top: 0;
             }
 
@@ -776,6 +979,10 @@ body {
                 overflow: visible;
             }
 
+            @include bp(mobile) {
+                overflow: visible;
+            }
+
         .main-swirl {
             position: absolute;
             height: 38vw;
@@ -784,6 +991,10 @@ body {
             top: 0;
 
             @include bp(mobile-landscape) {
+                right: 35vw;
+            }
+
+            @include bp(mobile) {
                 right: 35vw;
             }
             
@@ -800,6 +1011,10 @@ body {
             z-index: 2;
 
             @include bp(mobile-landscape) {
+                display: none;
+            }
+
+            @include bp(mobile) {
                 display: none;
             }
 
@@ -834,6 +1049,11 @@ body {
             margin-top: 10%;
             font-size: 48px;
         }
+
+        @include bp(mobile) {
+            margin-top: 70px;
+            font-size: 42px;
+        }
     }
 
     .hairstyle-block {
@@ -845,6 +1065,12 @@ body {
         @include bp(mobile-landscape) {
             flex-direction: column;
             align-items: center;
+        }
+
+           @include bp(mobile) {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10%;
         }
 
         .cut {
@@ -859,6 +1085,11 @@ body {
                 }
 
                 @include bp(mobile-landscape) {
+                    width: 33vw;
+                    height: 46.5vw;
+                }
+
+                @include bp(mobile) {
                     width: 33vw;
                     height: 46.5vw;
                 }
@@ -912,6 +1143,11 @@ body {
                         height: 60vw;
                     }
 
+                    @include bp(mobile) {
+                        width: 33vw;
+                        height: 70vw;
+                    }
+
                     
                 .color-description {
                     text-align: right;
@@ -935,6 +1171,12 @@ body {
                         bottom: -12vw;
                     }
 
+                    @include bp(mobile) {
+                        min-width: 50vw;
+                        right: 20vw;
+                        bottom: -12vw;
+                    }
+
 
                     .desc {
                         font-size: 38px;
@@ -944,6 +1186,10 @@ body {
                         }
 
                         @include bp(tablet) {
+                            font-size: 24px;
+                        }
+
+                        @include bp(mobile) {
                             font-size: 24px;
                         }
                     }
@@ -990,9 +1236,16 @@ body {
                         right: -5.8vw;
 
                         @include bp(mobile-landscape) {
-                            width: 26.5vw;
+                            width: 27vw;
                             height: 25vw;
                             bottom: -8vw;
+                        }
+
+                        @include bp(mobile) {
+                            width: 27vw;
+                            height: 25vw;
+                            bottom: -10vw;
+                            right: -7vw;
                         }
                     }
                 }
@@ -1002,6 +1255,10 @@ body {
         .braid {
 
             @include bp(mobile-landscape) {
+                margin-top: 22vw;
+            }
+
+            @include bp(mobile) {
                 margin-top: 22vw;
             }
 
@@ -1016,6 +1273,11 @@ body {
                 }
 
                 @include bp(mobile-landscape) {
+                    width: 33vw;
+                    height: 46.3vw;
+                }
+
+                @include bp(mobile) {
                     width: 33vw;
                     height: 46.3vw;
                 }
@@ -1035,6 +1297,12 @@ body {
                      right: -9.5vw;
 
                      @include bp(mobile-landscape) {
+                        width: 25.2vw;
+                        height: 21.8vw;
+                        right: -15vw;
+                    }
+
+                    @include bp(mobile) {
                         width: 25.2vw;
                         height: 21.8vw;
                         right: -15vw;
@@ -1074,7 +1342,12 @@ body {
     }
 
     @include bp(mobile-landscape) {
-        right: -40px;
+        right: -50px;
+    }
+
+    @include bp(mobile) {
+        right: -65px;
+        font-size: 13px;
     }
 }
 }
@@ -1095,6 +1368,10 @@ body {
 
     @include bp(mobile-landscape) {
         min-height: 70vw;
+    }
+
+    @include bp(mobile) {
+        min-height: 70vh;
     }
 
     .overlay {
@@ -1123,6 +1400,13 @@ body {
             @include bp(mobile-landscape) {
                 font-size: 46px;
             }
+
+            @include bp(mobile) {
+                font-size: 30px;
+                max-width: 95%;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
          }
 
 
@@ -1135,6 +1419,11 @@ body {
                  max-width: 65%;
                  line-height: 20px;
             }
+
+            @include bp(tablet) {
+                max-width: 80%;
+                line-height: 20px;
+           }
          }
 
     }
@@ -1176,15 +1465,18 @@ body {
         position: relative;
         z-index: 3;
 
-
-        @include bp(mobile-landscape) {
-            margin-top: 50vw;
-        }
-
         @include bp(mobile-landscape) {
             width: 25vw;
             height: 25vw;
             margin-right: -10vw;
+            margin-top: 50vw;
+        }
+
+        @include bp(mobile) {
+            width: 25vw;
+            height: 25vw;
+            margin-right: -10vw;
+            margin-top: 50vw;
         }
 
         img {
@@ -1209,6 +1501,13 @@ body {
                 top: 27vw;
                 left: -16vw;
             }
+
+            @include bp(mobile) {
+                width: 20vw;
+                height: 22vw;
+                top: 27vw;
+                left: -16vw;
+            }
         }
 
         .bw-woman {
@@ -1218,6 +1517,11 @@ body {
             z-index: 2;
 
             @include bp(mobile-landscape) {
+                width: 61.8vw;
+                height: 65.4vw;
+            }
+
+            @include bp(mobile) {
                 width: 61.8vw;
                 height: 65.4vw;
             }
@@ -1238,6 +1542,11 @@ body {
             width: 25vw;
             height: 32vw;
         }
+
+            @include bp(mobile) {
+                width: 25vw;
+                height: 32vw;
+            }
         }
     }
 
@@ -1252,6 +1561,11 @@ body {
 
         @include bp(mobile-landscape) {
             margin-left: -12vw;
+            margin-bottom: 35vw;
+        }
+
+        @include bp(mobile) {
+            margin-left: -18vw;
             margin-bottom: 35vw;
         }
 
@@ -1274,6 +1588,11 @@ body {
                 height: 19vw;
             }
 
+            @include bp(mobile) {
+                width: 33.8vw;
+                height: 33vw;
+            }
+
             img {
                 object-fit: cover;
             }
@@ -1292,6 +1611,10 @@ body {
 
             @include bp(mobile-landscape) {
                 max-width: 28vw;
+            }
+
+            @include bp(mobile) {
+                max-width: 31vw;
             }
             
 
@@ -1314,6 +1637,11 @@ body {
                     line-height: 30px;
                     font-size: 23px;
                 }
+
+                @include bp(mobile) {
+                    line-height: 20px;
+                    font-size: 18px;
+                }
             }
 
             .appointment {
@@ -1324,10 +1652,16 @@ body {
                 .appointment-link {
 
                     font-size: 14px;
-                    
                     font-family: "DM Sans";
                     cursor: pointer;
                     letter-spacing: -0.4px;
+
+                    .link {
+
+                        @include bp(mobile) {
+                            font-size: 14px;
+                        }
+                    }
 
                     .link-line {
                       @include linkline;
@@ -1367,16 +1701,43 @@ body {
         align-items: start;
     }
 
+
+    @include bp(mobile) {
+        flex-direction: column;
+        align-items: start;
+    }
+
     .footer-items {
         display: flex;
         font-family: "DM Sans";
 
+        @include bp(mobile) {
+            flex-direction: column;
+        }
+
+
+        .mobile {
+
+            @include bp(mobile) {
+                margin-top: 5px;
+            }
+        }
+
         .footer-block {
             margin-right: 75px;
+
+            @include bp(mobile) {
+                margin-right: 0;
+            }
+
 
 
             .footer-inner {
                 margin-bottom: 30px;
+
+                @include bp(mobile) {
+                    margin-bottom: 5px;
+                }
             }
 
             .footer-link {
@@ -1410,6 +1771,11 @@ body {
         @include bp(mobile-landscape) {
             padding-top: 30px;
         }
+
+        @include bp(mobile) {
+            padding-top: 30px;
+            font-size: 20px;
+        }
     }
 
 
@@ -1424,6 +1790,10 @@ body {
             }
 
             @include bp(mobile-landscape) {
+                justify-content: start;
+            }
+
+            @include bp(mobile) {
                 justify-content: start;
             }
 
@@ -1443,6 +1813,7 @@ body {
                 @include bp(mobile-landscape) {
                     font-size: 22px;
                 }
+
 
                 }
 
