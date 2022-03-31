@@ -11,11 +11,23 @@ menuButton.addEventListener('click', function() {
 
  //gsap animations  
 
-gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 var startLoad = gsap.timeline()
-// var openChallenge = gsap.timeline()
-// var openSolution = gsap.timeline()
+
+let container = document.querySelector(".horizontal-scroll")
+
+gsap.to(".scroll-text", {
+  xPercent: -10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: container,
+    // pin: true,
+    scrub: 1,
+    snap:false,
+    // end: () => "+=" + container.offsetWidth
+  }
+})
               
 
 startLoad.to('.pink',{
@@ -45,13 +57,155 @@ startLoad.to('.pink',{
              .to('.loading',{
                     height: 0,
                     duration: 0.01,
-                   })                                        
+                   }) 
+                .from('.girl-image',{
+                    width: 0,
+                    duration: 0.5,
+                   })  
+                .from('#header-text',{
+                    opacity: 0,
+                    duration: 0.5,
+                   })                                      
                   ; 
                   
 startLoad.play();
 
-TweenMax.to('.vect', 10, {
+gsap.to('.vect', 10, {
      rotation: "+=180", 
      repeat:-1, 
      ease: Linear.easeNone, 
-     transformOrigin:"50% 50%" });
+     transformOrigin:"50% 50%" }
+     );
+
+
+
+ const cutImage = document.querySelector('.cut-image');
+ const braidImage = document.querySelector('.braid-img');   
+ const colorImage = document.querySelector('#color-img'); 
+
+cutImage.addEventListener('mouseover', function() {
+
+          gsap.to('.cut-image', 0.6, {
+               rotation: "+=5", 
+               scale: "1.1", 
+               ease: Linear.easeNone, 
+               transformOrigin:"50% 50%" }
+               );    
+
+        })   
+
+
+  cutImage.addEventListener('mouseout', function() {
+
+          gsap.to('.cut-image', 0.5, {
+               rotation: "0", 
+               scale: "1", 
+               ease: Linear.easeNone, 
+               transformOrigin:"50% 50%" }
+               );    
+
+        })  
+
+        braidImage.addEventListener('mouseover', function() {
+
+          gsap.to('.braid-img', 0.6, {
+               rotation: "+=5", 
+               scale: "1.1", 
+               ease: Linear.easeNone, 
+               transformOrigin:"50% 50%" }
+               );    
+
+        })   
+
+
+  braidImage.addEventListener('mouseout', function() {
+
+          gsap.to('.braid-img', 0.5, {
+               rotation: "0", 
+               scale: "1", 
+               ease: Linear.easeNone, 
+               transformOrigin:"50% 50%" }
+               );    
+
+        })       
+
+
+
+        
+ colorImage.addEventListener('mouseover', function() {
+
+          gsap.to('#color-img', 0.6, {
+               width: '18vw', 
+               ease: Linear.easeNone, 
+               transformOrigin:"50% 50%" }
+               );    
+
+        })   
+
+
+  colorImage.addEventListener('mouseout', function() {
+
+          gsap.to('#color-img', 0.5, {
+               width: '13vw',
+               ease: Linear.easeNone, 
+               transformOrigin:"50% 50%" }
+               );    
+
+        })  
+
+
+     
+     
+ let headerBottom = document.querySelector(".header-bottom")
+
+        gsap.to("#header-img", {
+          y: "-13vw",
+          ease: "none",
+          scrollTrigger: {
+            trigger: headerBottom,
+            // pin: true,
+            scrub: 1,
+            snap:false,
+            // end: () => "+=" + container.offsetWidth
+          }
+        })
+
+ let main = document.querySelector(".main")
+
+        gsap.to("#main-T", {
+          y: "-13vw",
+          ease: "none",
+          scrollTrigger: {
+            trigger: main,
+            // pin: true,
+            scrub: 1,
+            snap:false,
+            // end: () => "+=" + container.offsetWidth
+          }
+        })      
+
+ let appt = document.querySelector(".appointment-block")
+
+        gsap.to("#appt-B", {
+          y: "-13vw",
+          ease: "none",
+          scrollTrigger: {
+            trigger: appt,
+            // pin: true,
+            scrub: 1,
+            snap:false,
+            // end: () => "+=" + container.offsetWidth
+          }
+        })  
+        
+        gsap.to("#appt-A", {
+          y: "5vw",
+          ease: "none",
+          scrollTrigger: {
+            trigger: appt,
+            // pin: true,
+            scrub: 1,
+            snap:false,
+            // end: () => "+=" + container.offsetWidth
+          }
+        }) 

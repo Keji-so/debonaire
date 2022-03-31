@@ -17,7 +17,7 @@ body {
 }
 
 .hero {
-  background: #DFCCC2;
+  background: #E6C2AF;
   position: relative;
 }
 
@@ -30,7 +30,7 @@ body {
 
 .hero .loading .pink {
   position: absolute;
-  background: #DFCCC2;
+  background: #E6C2AF;
   width: 100%;
   height: 100%;
   z-index: 7;
@@ -38,7 +38,7 @@ body {
 
 .hero .loading .grey {
   position: absolute;
-  background: #C5CEBD;
+  background: #b0bec5;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -69,7 +69,7 @@ body {
 }
 
 .hero .loading .grey .load .load-text .load-overlay {
-  background: #C5CEBD;
+  background: #b0bec5;
   position: absolute;
   width: 0%;
   height: 100%;
@@ -566,6 +566,7 @@ body {
   margin-top: 50px;
   margin-right: -7.5%;
   z-index: 3;
+  overflow: hidden;
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
@@ -816,6 +817,7 @@ body {
   max-width: 12vw;
   margin-top: 30px;
   margin-left: 36px;
+  overflow: hidden;
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
@@ -963,6 +965,7 @@ body {
   line-height: 48px;
   letter-spacing: -1.5;
   font-family: "Lexend Deca";
+  overflow: hidden;
 }
 
 @media (min-width: 768px) and (max-width: 900px) {
@@ -1094,7 +1097,7 @@ body {
 
 .main {
   padding: 150px 0;
-  background: #C5CEBD;
+  background: #b0bec5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1430,7 +1433,7 @@ body {
 .services-wrapper .services-block {
   font-family: "Lexend Deca";
   padding: 10.4vw 14.4vw;
-  background: #dfccc2;
+  background: #E6C2AF;
 }
 
 .services-wrapper .services-block .services-title {
@@ -1602,7 +1605,7 @@ body {
 @media (min-width: 479px) and (max-width: 767px) {
   .services-wrapper .services-block .hairstyle-block .color .color-block .color-img .color-description {
     min-width: 50vw;
-    right: 20vw;
+    right: 5vw;
     bottom: -12vw;
   }
 }
@@ -1610,7 +1613,7 @@ body {
 @media (max-width: 478px) {
   .services-wrapper .services-block .hairstyle-block .color .color-block .color-img .color-description {
     min-width: 50vw;
-    right: 20vw;
+    right: 5vw;
     bottom: -12vw;
   }
 }
@@ -1817,12 +1820,16 @@ body {
   }
 }
 
-.passion {
+.passion-cont {
+  position: relative;
+}
+
+.passion-cont .passion {
   background-image: url("./images/woman-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 50vw;
+  height: 100vh;
   background-position: bottom;
   position: relative;
   display: -webkit-box;
@@ -1836,21 +1843,24 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 @media (min-width: 479px) and (max-width: 767px) {
-  .passion {
+  .passion-cont .passion {
     min-height: 70vw;
   }
 }
 
 @media (max-width: 478px) {
-  .passion {
+  .passion-cont .passion {
     min-height: 70vh;
   }
 }
 
-.passion .overlay {
+.passion-cont .passion .overlay {
   background-color: rgba(209, 209, 209, 0.2);
   position: absolute;
   top: 0;
@@ -1860,30 +1870,30 @@ body {
   z-index: 2;
 }
 
-.passion .passion-inner {
+.passion-cont .passion .passion-inner {
   text-align: center;
 }
 
-.passion .passion-inner .passion-title {
+.passion-cont .passion .passion-inner .passion-title {
   font-family: "Lexend Deca";
   font-size: 56px;
   margin-bottom: 20px;
 }
 
 @media (min-width: 768px) and (max-width: 900px) {
-  .passion .passion-inner .passion-title {
+  .passion-cont .passion .passion-inner .passion-title {
     font-size: 48px;
   }
 }
 
 @media (min-width: 479px) and (max-width: 767px) {
-  .passion .passion-inner .passion-title {
+  .passion-cont .passion .passion-inner .passion-title {
     font-size: 46px;
   }
 }
 
 @media (max-width: 478px) {
-  .passion .passion-inner .passion-title {
+  .passion-cont .passion .passion-inner .passion-title {
     font-size: 30px;
     max-width: 95%;
     margin: 0 auto;
@@ -1891,21 +1901,21 @@ body {
   }
 }
 
-.passion .passion-inner .passion-text {
+.passion-cont .passion .passion-inner .passion-text {
   max-width: 70%;
   margin: 0 auto;
   line-height: 24px;
 }
 
 @media (min-width: 768px) and (max-width: 900px) {
-  .passion .passion-inner .passion-text {
+  .passion-cont .passion .passion-inner .passion-text {
     max-width: 65%;
     line-height: 20px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 900px) {
-  .passion .passion-inner .passion-text {
+  .passion-cont .passion .passion-inner .passion-text {
     max-width: 80%;
     line-height: 20px;
   }
@@ -2225,7 +2235,7 @@ body {
 
 .footer {
   padding: 7vw 6vw;
-  background: #DFCCC2;
+  background: #E6C2AF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
